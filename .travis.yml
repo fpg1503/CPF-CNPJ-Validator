@@ -4,8 +4,8 @@ env:
   global:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
-  - WORKSPACE="__PROJECT_NAME__.xcworkspace"
-  - IOS_FRAMEWORK_SCHEME="__PROJECT_NAME__"
+  - WORKSPACE="CPF-CNPJ-Validator.xcworkspace"
+  - IOS_FRAMEWORK_SCHEME="CPF-CNPJ-Validator"
   - IOS_SDK=iphonesimulator10.0
   - EXAMPLE_SCHEME="iOS Example"
   matrix:
@@ -30,5 +30,4 @@ script:
   - if [ $POD_LINT == "YES" ]; then
       pod lib lint;
     fi
-
-  - CheckCocoaPodsQualityIndexes.rb __PROJECT_NAME__
+    
