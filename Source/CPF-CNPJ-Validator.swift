@@ -58,12 +58,10 @@ public struct Validator {
 
         guard options.contains(.allowCommonNumbers) ||
             !isCommonNumber(cleanString) else {
-                return .repeatedPattern
+                return .commonNumber
         }
 
-        //TODO: Validate
-        
-        return .valid
+        return validate(cleanString, kind: kind) ? .valid : .invalid
     }
 }
 
@@ -107,5 +105,38 @@ fileprivate extension Validator {
         let commonNumbers = ["12345678909"]
 
         return commonNumbers.contains(number)
+    }
+
+    fileprivate func validate(_ numbers: [Int], kind: Kind) -> Bool {
+        switch kind {
+        case .CPF:
+            guard numbers.count == 11 else { return false }
+            let digits = Array(numbers[0..<9])
+            let firstDigit = checkDigit(for: digits, upperBound: 9, lowerBound: 0, mod: 11)
+            let secondDigit = checkDigit(for: digits + [firstDigit], upperBound: 9, lowerBound: 0, mod: 11)
+
+            return firstDigit == numbers[9] && secondDigit == numbers[10]
+        case .CNPJ:
+            guard numbers.count == 14 else { return false }
+            let digits = Array(numbers[0..<12])
+            let firstDigit = checkDigit(for: digits, upperBound: 9, lowerBound: 2, mod: 11)
+            let secondDigit = checkDigit(for: digits + [firstDigit], upperBound: 9, lowerBound: 2, mod: 11)
+
+            return firstDigit == numbers[12] && secondDigit == numbers[13]
+        }
+    }
+
+    private func checkDigit(for digits: [Int], upperBound: Int, lowerBound: Int, mod: Int, secondMod: Int = 10) -> Int {
+        guard lowerBound < upperBound else { preconditionFailure("lower bound is greater than upper bound") }
+
+        let factors = Array((lowerBound...upperBound).reversed())
+
+        let multiplied = digits.reversed().enumerated().map { (index, digit) in
+            return digit * factors[index % factors.count]
+        }
+
+        let sum = multiplied.reduce(0, +)
+
+        return (sum % mod) % secondMod
     }
 }
