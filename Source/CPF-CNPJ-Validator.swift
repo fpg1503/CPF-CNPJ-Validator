@@ -1,29 +1,31 @@
-import UIKit
+public enum Status {
+    case valid
+    case wrongLength
+    case repeatedPattern
+    case commonNumber
+}
 
-public class CPF_CNPJ_Validator: UIView {
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
+public struct ValidationOptions: OptionSet {
+    public let rawValue: Int
+
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
     }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
+
+    public static let addLeadingZeros          = ValidationOptions(rawValue: 1 << 0)
+    public static let ignoreRemainigCharacters = ValidationOptions(rawValue: 1 << 1)
+    public static let interpretOnlyNumbers     = ValidationOptions(rawValue: 1 << 2)
+    public static let allowRepeatedPatterns    = ValidationOptions(rawValue: 1 << 3)
+    public static let allowCommonNumbers       = ValidationOptions(rawValue: 1 << 4)
+}
+
+public struct Validator {
+    public func validate(cpf: String, options: ValidationOptions = []) -> Status {
+        return .valid
     }
-    
-    func setup() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
-        let bundle = Bundle(for: type(of: self))
-        let image = UIImage(named: "wk", in: bundle, compatibleWith: nil)
-        let imageView = UIImageView(image: image)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(imageView)
-        
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0))
-        self.layoutIfNeeded()
+
+    public func validate(cnpj: String, options: ValidationOptions = []) -> Status {
+        return .valid
     }
+
 }
