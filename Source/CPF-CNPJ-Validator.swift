@@ -1,15 +1,6 @@
-//
-//  CPF-CNPJ-Validator.swift
-//  CPF-CNPJ-Validator
-//
-//  Created by Francesco Perrotti-Garcia on Oct 23, 2016.
-//  Copyright © 2016 Francesco Perrotti-Garcia. All rights reserved.
-//
-
-import Foundation
 import UIKit
 
-public class CPF-CNPJ-Validator: UIView {
+public class CPF_CNPJ_Validator: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()

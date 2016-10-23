@@ -62,5 +62,4 @@ Carthage/Build
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
-fastlane/test_output
-__PROJECT_NAME__.framework.zip
+CPF-CNPJ-Validator.framework.zip

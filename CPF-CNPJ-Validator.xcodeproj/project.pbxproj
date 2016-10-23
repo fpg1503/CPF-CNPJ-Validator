@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D95E1BE71D88D63400F94976 /* CPF-CNPJ-Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* CPF-CNPJ-Validator.framework */; };
+		D95E1BE71D88D63400F94976 /* CPF_CNPJ_Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* CPF_CNPJ_Validator.framework */; };
 		D95E1BEC1D88D63400F94976 /* CPF-CNPJ-ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* CPF-CNPJ-ValidatorTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* CPF-CNPJ-Validator.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* CPF-CNPJ-Validator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D95E1BF91D88E01300F94976 /* wk.png in Resources */ = {isa = PBXBuildFile; fileRef = D95E1BF81D88E01300F94976 /* wk.png */; };
 		D95E1BFB1D88E2D500F94976 /* CPF-CNPJ-Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BFA1D88E2D500F94976 /* CPF-CNPJ-Validator.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,19 +19,18 @@
 			containerPortal = D95E1BD41D88D63200F94976 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D95E1BDC1D88D63300F94976;
-			remoteInfo = CPF-CNPJ-Validator;
+			remoteInfo = "CPF-CNPJ-Validator";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D95E1BDD1D88D63300F94976 /* CPF-CNPJ-Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CPF-CNPJ-Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D95E1BE01D88D63300F94976 /* CPF-CNPJ-Validator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPF-CNPJ-Validator.h; sourceTree = "<group>"; };
+		D95E1BDD1D88D63300F94976 /* CPF_CNPJ_Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CPF_CNPJ_Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95E1BE01D88D63300F94976 /* CPF-CNPJ-Validator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPF-CNPJ-Validator.h"; sourceTree = "<group>"; };
 		D95E1BE11D88D63300F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D95E1BE61D88D63400F94976 /* CPF-CNPJ-ValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPF-CNPJ-ValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D95E1BEB1D88D63400F94976 /* CPF-CNPJ-ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPF-CNPJ-ValidatorTests.swift; sourceTree = "<group>"; };
+		D95E1BE61D88D63400F94976 /* CPF_CNPJ_ValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPF_CNPJ_ValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95E1BEB1D88D63400F94976 /* CPF-CNPJ-ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CPF-CNPJ-ValidatorTests.swift"; sourceTree = "<group>"; };
 		D95E1BED1D88D63400F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D95E1BF81D88E01300F94976 /* wk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wk.png; path = Resources/wk.png; sourceTree = SOURCE_ROOT; };
-		D95E1BFA1D88E2D500F94976 /* CPF-CNPJ-Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPF-CNPJ-Validator.swift; sourceTree = "<group>"; };
+		D95E1BFA1D88E2D500F94976 /* CPF-CNPJ-Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CPF-CNPJ-Validator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95E1BE71D88D63400F94976 /* CPF-CNPJ-Validator.framework in Frameworks */,
+				D95E1BE71D88D63400F94976 /* CPF_CNPJ_Validator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				D95E1BDF1D88D63300F94976 /* Source */,
-				D95E1BF71D88DFFD00F94976 /* Resources */,
 				D95E1BEA1D88D63400F94976 /* Tests */,
 				D95E1BDE1D88D63300F94976 /* Products */,
 			);
@@ -67,8 +64,8 @@
 		D95E1BDE1D88D63300F94976 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D95E1BDD1D88D63300F94976 /* CPF-CNPJ-Validator.framework */,
-				D95E1BE61D88D63400F94976 /* CPF-CNPJ-ValidatorTests.xctest */,
+				D95E1BDD1D88D63300F94976 /* CPF_CNPJ_Validator.framework */,
+				D95E1BE61D88D63400F94976 /* CPF_CNPJ_ValidatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,15 +86,6 @@
 				D95E1BEB1D88D63400F94976 /* CPF-CNPJ-ValidatorTests.swift */,
 				D95E1BED1D88D63400F94976 /* Info.plist */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		D95E1BF71D88DFFD00F94976 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D95E1BF81D88E01300F94976 /* wk.png */,
-			);
-			name = Resources;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -128,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = CPF-CNPJ-Validator;
-			productName = CPF-CNPJ-Validator;
-			productReference = D95E1BDD1D88D63300F94976 /* CPF-CNPJ-Validator.framework */;
+			name = "CPF-CNPJ-Validator";
+			productName = "CPF-CNPJ-Validator";
+			productReference = D95E1BDD1D88D63300F94976 /* CPF_CNPJ_Validator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D95E1BE51D88D63400F94976 /* CPF-CNPJ-ValidatorTests */ = {
@@ -146,9 +134,9 @@
 			dependencies = (
 				D95E1BE91D88D63400F94976 /* PBXTargetDependency */,
 			);
-			name = CPF-CNPJ-ValidatorTests;
-			productName = CPF-CNPJ-ValidatorTests;
-			productReference = D95E1BE61D88D63400F94976 /* CPF-CNPJ-ValidatorTests.xctest */;
+			name = "CPF-CNPJ-ValidatorTests";
+			productName = "CPF-CNPJ-ValidatorTests";
+			productReference = D95E1BE61D88D63400F94976 /* CPF_CNPJ_ValidatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -195,7 +183,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95E1BF91D88E01300F94976 /* wk.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +334,8 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.--PROJECT-NAME--";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.CPF-CNPJ-Validator";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -367,8 +354,8 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.--PROJECT-NAME--";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.CPF-CNPJ-Validator";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -378,10 +365,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = CPF-CNPJ-ValidatorTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.--PROJECT-NAME--Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.CPF-CNPJ-ValidatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -390,10 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = CPF-CNPJ-ValidatorTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.--PROJECT-NAME--Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.CPF-CNPJ-ValidatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
