@@ -15,38 +15,54 @@ public struct ValidationOptions: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let addLeadingZeros          = ValidationOptions(rawValue: 1 << 0)
+    public static let addLeadingZeros           = ValidationOptions(rawValue: 1 << 0)
     public static let ignoreRemainingCharacters = ValidationOptions(rawValue: 1 << 1)
-    public static let interpretOnlyNumbers     = ValidationOptions(rawValue: 1 << 2)
-    public static let allowRepeatedPatterns    = ValidationOptions(rawValue: 1 << 3)
-    public static let allowCommonNumbers       = ValidationOptions(rawValue: 1 << 4)
+    public static let interpretOnlyNumbers      = ValidationOptions(rawValue: 1 << 2)
+    public static let allowRepeatedPatterns     = ValidationOptions(rawValue: 1 << 3)
+    public static let allowCommonNumbers        = ValidationOptions(rawValue: 1 << 4)
+}
+
+public enum Kind {
+    case CPF
+    case CNPJ
+
+    var length: Int {
+        switch self {
+        case .CPF: return 11
+        case .CNPJ: return 14
+        }
+    }
 }
 
 public struct Validator {
     public func validate(cpf: String, options: ValidationOptions = []) -> Status {
-        guard isValid(cpf, options: options) else { return .invalid }
+        return validate(cpf, kind: .CPF, options: options)
+    }
 
-        let desiredLength = 11
-        let cleanCPF = clean(cpf, options: options, length: desiredLength)
+    public func validate(cnpj: String, options: ValidationOptions = []) -> Status {
+        return validate(cnpj, kind: .CNPJ, options: options)
+    }
 
-        guard cleanCPF.count == desiredLength else { return .wrongLength }
+    public func validate(_ string: String, kind: Kind, options: ValidationOptions = []) -> Status {
+        guard isValid(string, options: options) else { return .invalid }
+
+        let desiredLength = kind.length
+        let cleanString = clean(string, options: options, length: desiredLength)
+
+        guard cleanString.count == desiredLength else { return .wrongLength }
 
         guard options.contains(.allowRepeatedPatterns) ||
-            !isRepeatedPattern(cleanCPF) else {
-            return .repeatedPattern
+            !isRepeatedPattern(cleanString) else {
+                return .repeatedPattern
         }
 
         guard options.contains(.allowCommonNumbers) ||
-            !isCommonNumber(cleanCPF) else {
+            !isCommonNumber(cleanString) else {
                 return .repeatedPattern
         }
 
         //TODO: Validate
-
-        return .valid
-    }
-
-    public func validate(cnpj: String, options: ValidationOptions = []) -> Status {
+        
         return .valid
     }
 }
