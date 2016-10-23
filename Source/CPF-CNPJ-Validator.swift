@@ -3,6 +3,7 @@ public enum Status {
     case wrongLength
     case repeatedPattern
     case commonNumber
+    case invalid
 }
 
 public struct ValidationOptions: OptionSet {
