@@ -3,7 +3,7 @@ import XCTest
 
 class CPF_CNPJ_ValidatorTests: XCTestCase {
 
-    let validator = Validator()
+    let validator = StatusValidator()
 
     func testEmptyCPF() {
         let cpf = ""

@@ -34,15 +34,26 @@ public enum Kind {
     }
 }
 
-public struct Validator {
-    public func validate(cpf: String, options: ValidationOptions = []) -> Status {
+public protocol Validator {
+    associatedtype T
+
+    func validate(cpf: String, options: ValidationOptions) -> T
+    func validate(cnpj: String, options: ValidationOptions) -> T
+
+    func validate(_ string: String, kind: Kind, options: ValidationOptions) -> T
+}
+
+extension Validator {
+    public func validate(cpf: String, options: ValidationOptions = []) -> T {
         return validate(cpf, kind: .CPF, options: options)
     }
 
-    public func validate(cnpj: String, options: ValidationOptions = []) -> Status {
+    public func validate(cnpj: String, options: ValidationOptions = []) -> T {
         return validate(cnpj, kind: .CNPJ, options: options)
     }
+}
 
+public struct StatusValidator: Validator {
     public func validate(_ string: String, kind: Kind, options: ValidationOptions = []) -> Status {
         guard isValid(string, options: options) else { return .invalid }
 
@@ -62,6 +73,15 @@ public struct Validator {
         }
 
         return validate(cleanString, kind: kind) ? .valid : .invalid
+    }
+}
+
+public struct BooleanValidator: Validator {
+    let statusValidator = StatusValidator()
+    public func validate(_ string: String, kind: Kind, options: ValidationOptions = []) -> Bool {
+        let validationStatus = statusValidator.validate(string, kind: kind, options: options)
+
+        return validationStatus == .valid
     }
 }
 
