@@ -91,9 +91,9 @@ fileprivate extension Validator {
             let zerosToAdd = length - count
             let zeros = Array(repeatElement(0, count: zerosToAdd))
             return zeros + numbers
-        } else {
-            return numbers
         }
+
+        return numbers
     }
 
     fileprivate func isRepeatedPattern(_ numbers: [Int]) -> Bool {

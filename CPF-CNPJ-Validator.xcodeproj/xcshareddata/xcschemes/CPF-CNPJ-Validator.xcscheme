@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D95E1BDC1D88D63300F94976"
-               BuildableName = "CPF-CNPJ-Validator.framework"
+               BuildableName = "CPF_CNPJ_Validator.framework"
                BlueprintName = "CPF-CNPJ-Validator"
                ReferencedContainer = "container:CPF-CNPJ-Validator.xcodeproj">
             </BuildableReference>
@@ -26,14 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D95E1BE51D88D63400F94976"
-               BuildableName = "CPF-CNPJ-ValidatorTests.xctest"
+               BuildableName = "CPF_CNPJ_ValidatorTests.xctest"
                BlueprintName = "CPF-CNPJ-ValidatorTests"
                ReferencedContainer = "container:CPF-CNPJ-Validator.xcodeproj">
             </BuildableReference>
@@ -43,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D95E1BDC1D88D63300F94976"
-            BuildableName = "CPF-CNPJ-Validator.framework"
+            BuildableName = "CPF_CNPJ_Validator.framework"
             BlueprintName = "CPF-CNPJ-Validator"
             ReferencedContainer = "container:CPF-CNPJ-Validator.xcodeproj">
          </BuildableReference>
@@ -65,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D95E1BDC1D88D63300F94976"
-            BuildableName = "CPF-CNPJ-Validator.framework"
+            BuildableName = "CPF_CNPJ_Validator.framework"
             BlueprintName = "CPF-CNPJ-Validator"
             ReferencedContainer = "container:CPF-CNPJ-Validator.xcodeproj">
          </BuildableReference>
@@ -83,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D95E1BDC1D88D63300F94976"
-            BuildableName = "CPF-CNPJ-Validator.framework"
+            BuildableName = "CPF_CNPJ_Validator.framework"
             BlueprintName = "CPF-CNPJ-Validator"
             ReferencedContainer = "container:CPF-CNPJ-Validator.xcodeproj">
          </BuildableReference>
