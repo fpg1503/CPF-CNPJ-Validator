@@ -54,6 +54,9 @@ extension Validator {
 }
 
 public struct StatusValidator: Validator {
+
+    public init() { }
+
     public func validate(_ string: String, kind: Kind, options: ValidationOptions = []) -> Status {
         guard isValid(string, options: options) else { return .invalid }
 
@@ -77,6 +80,9 @@ public struct StatusValidator: Validator {
 }
 
 public struct BooleanValidator: Validator {
+
+    public init() { }
+
     let statusValidator = StatusValidator()
     public func validate(_ string: String, kind: Kind, options: ValidationOptions = []) -> Bool {
         let validationStatus = statusValidator.validate(string, kind: kind, options: options)
