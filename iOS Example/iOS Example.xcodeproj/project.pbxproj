@@ -12,7 +12,7 @@
 		D95E1C4A1D88E71A00F94976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C481D88E71A00F94976 /* Main.storyboard */; };
 		D95E1C4C1D88E71A00F94976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4B1D88E71A00F94976 /* Assets.xcassets */; };
 		D95E1C4F1D88E71A00F94976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */; };
-		D95E1C8A1D88F39300F94976 /* CPF-CNPJ-Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1C891D88F39300F94976 /* CPF-CNPJ-Validator.framework */; };
+		D95E1C8A1D88F39300F94976 /* CPF_CNPJ_Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1C891D88F39300F94976 /* CPF_CNPJ_Validator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		D95E1C4B1D88E71A00F94976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95E1C4E1D88E71A00F94976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95E1C501D88E71A00F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D95E1C891D88F39300F94976 /* CPF-CNPJ-Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPF-CNPJ-Validator.framework; path = "../build/Debug-iphoneos/CPF-CNPJ-Validator.framework"; sourceTree = "<group>"; };
+		D95E1C891D88F39300F94976 /* CPF_CNPJ_Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPF_CNPJ_Validator.framework; path = "../build/Debug-iphoneos/CPF_CNPJ_Validator.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95E1C8A1D88F39300F94976 /* CPF-CNPJ-Validator.framework in Frameworks */,
+				D95E1C8A1D88F39300F94976 /* CPF_CNPJ_Validator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +71,7 @@
 		D95E1C881D88F39300F94976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D95E1C891D88F39300F94976 /* CPF-CNPJ-Validator.framework */,
+				D95E1C891D88F39300F94976 /* CPF_CNPJ_Validator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
