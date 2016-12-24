@@ -8,13 +8,50 @@
 
 A Swift library to validate CPF and CNPJ. Automatically strips formatting, covers valid numbers, wrong length, number sequences, and common fake numbers. Options can be passed to allow invalid number sequences, that's useful for testing.
 
+## Usage
+
+You can use two types of validators: `StatusValidator` (if you're interested in what's wrong) and `BooleanValidator` (if you only care if a given number is valid or not).
+
+### `BooleanValidator`
+
+```swift
+let success = BooleanValidator().validate(cpf: "12345678909")
+```
+
+### `StatusValidator`
+
+```swift
+let cpf = "1234567890912345678909"
+let status = validator.validate(cpf: cpf)
+//Status is .wrongLength
+```
+
+### Validation Options
+
+You can also pass options to the validate method. The options available are:
+
+- Add Leading Zeros
+- Ignore Remaining Characters
+- Interpret Only Numbers
+- Allow Repeated Patterns
+- Allow Common Numbers
+
+By default no options are given
+
+### Validation Statuses
+
+The possible validation statuses are:
+
+- Valid
+- WrongLength
+- RepeatedNumber
+- CommonNumber
+- Invalid
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-
-## Requirements
-
 
 ## Installation
 
@@ -63,8 +100,11 @@ Run `carthage update` to build the framework and drag the built `CPF-CNPJ-Valida
 
 ## Author
 
-Francesco Perrotti-Garcia
+Francesco Perrotti-Garcia ([@fpg1503](https://github.com/fpg1503))
 
+### Contributing
+
+All contributions are welcome. Feel free to open Issues and PRs. In case of doubts read our [CONTRIBUTING.md](https://github.com/fpg1503/CPF-CNPJ-Validator/blob/master/CONTRIBUTING.md), open an issue or tweet me [@fpg1503](https://twitter.com/fpg1503).
 
 ## License
 
