@@ -6,6 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/CPF-CNPJ-Validator.svg?style=flat)](https://cocoapods.org/pods/CPF-CNPJ-Validator)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+A Swift library to validate CPF and CNPJ. Automatically strips formatting, covers valid numbers, wrong length, number sequences, and common fake numbers. Options can be passed to allow invalid number sequences, that's useful for testing.
 
 ## Example
 
