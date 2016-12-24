@@ -43,10 +43,10 @@ By default no options are given
 The possible validation statuses are:
 
 - Valid
-- WrongLength
-- RepeatedNumber
-- CommonNumber
-- Invalid
+- Wrong Length (i.e. `111`)
+- Repeated Pattern (i.e. `111.111.111-11`)
+- Common Number (i.e. `123.456.789-09`)
+- Invalid (invalid verification digits)
 
 
 ## Example
