@@ -157,10 +157,10 @@ fileprivate extension Validator {
 
         let factors = Array((lowerBound...upperBound).reversed())
 
-        let multiplied = digits.reversed().enumerated().map { (index, digit) in
-            return digit * factors[index % factors.count]
+        let multiplied = digits.reversed().enumerated().map {
+            return $0.element * factors[$0.offset % factors.count]
         }
-
+        
         let sum = multiplied.reduce(0, +)
 
         return (sum % mod) % secondMod
