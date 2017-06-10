@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CPF-CNPJ-Validator'
-  s.version = '0.1.0'
+  s.version = '1.0.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = '✅ A Swifty CPF and CNPJ validator'
 
