@@ -55,6 +55,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+For Swift 4.0+ use v1.0
+
 ### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
@@ -92,7 +94,7 @@ $ brew install carthage
 To integrate CPF-CNPJ-Validator into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "fpg1503/CPF-CNPJ-Validator" ~> 0.1
+github "fpg1503/CPF-CNPJ-Validator" ~> 1.0
 ```
 
 Run `carthage update` to build the framework and drag the built `CPF-CNPJ-Validator.framework` into your Xcode project.
