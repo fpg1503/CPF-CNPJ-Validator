@@ -95,7 +95,7 @@ fileprivate extension Validator {
     fileprivate func isValid(_ string: String, options: ValidationOptions) -> Bool {
         guard !options.contains(.interpretOnlyNumbers) else { return true }
 
-        let characters = string.characters.map { String($0) }
+        let characters = string.map { String($0) }
         let allowedCharacterSet = CharacterSet(charactersIn: "0123456789-.")
         let charactersRemovingAllowedCharacters = characters.filter {
             $0.rangeOfCharacter(from: allowedCharacterSet) == nil
@@ -106,7 +106,7 @@ fileprivate extension Validator {
 
 
     fileprivate func clean(_ string: String, options: ValidationOptions, length: Int) -> [Int] {
-        let characters = string.characters.map { String($0) }
+        let characters = string.map { String($0) }
         let numbers = characters.map { Int($0) }.flatMap { $0 }
 
         let count = numbers.count
