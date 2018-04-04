@@ -96,7 +96,7 @@ fileprivate extension Validator {
         guard !options.contains(.interpretOnlyNumbers) else { return true }
 
         let characters = string.map { String($0) }
-        let allowedCharacterSet = CharacterSet(charactersIn: "0123456789-.")
+        let allowedCharacterSet = CharacterSet(charactersIn: "0123456789-./")
         let charactersRemovingAllowedCharacters = characters.filter {
             $0.rangeOfCharacter(from: allowedCharacterSet) == nil
         }
